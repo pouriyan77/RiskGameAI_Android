@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <LinearLayout
+        android:id="@+id/statusBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/gameStatusTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:text="وضعیت : افزایش نیرو"
+            android:gravity="center"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:layout_marginRight="1dp"/>
+
+        <TextView
+            android:id="@+id/turnTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:text="نوبت : PL1"
+            android:gravity="center"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:layout_marginLeft="1dp"/>
+
+    </LinearLayout>
+
+    <com.otaliastudios.zoom.ZoomLayout
+        android:id="@+id/zoomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linear"
+        android:layout_below="@+id/statusBar"
+        app:overScrollHorizontal="true"
+        app:overScrollVertical="true"
+        app:overPinchable="true"
+        app:minZoom="1.0"
+        app:minZoomType="zoom"
+        app:maxZoom="7.0"
+        app:maxZoomType="zoom"
+        app:hasClickableChildren="true"
+        android:layout_margin="5dp">
+
+        <LinearLayout
+            android:id="@+id/zoomLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <GridLayout
+                        android:id="@+id/mapGrid"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal" />
+
+                </HorizontalScrollView>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </com.otaliastudios.zoom.ZoomLayout>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/endAttackButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary"
+            android:text="پایان حمله"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/numberOfIncreaseTextView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary"
+            tools:text="نیرو های باقی مانده : 2"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

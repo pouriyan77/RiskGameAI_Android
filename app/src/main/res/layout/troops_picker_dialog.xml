@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="با چند نیرو حمله می کنی؟"
+        android:textColor="#000"
+        android:textSize="14sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginVertical="8dp"/>
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleTextView">
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/minTextView"
+            android:layout_toLeftOf="@+id/maxTextView"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/minTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:layout_alignParentLeft="true"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:layout_marginHorizontal="8dp"/>
+
+        <TextView
+            android:id="@+id/maxTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="8"
+            android:layout_alignParentRight="true"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:layout_marginHorizontal="8dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/countTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="1"
+        android:textColor="#000"
+        android:layout_below="@id/relative"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="5dp"/>
+
+    <Button
+        android:id="@+id/attackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="حمله"
+        android:background="@color/colorPrimary"
+        android:textColor="#fff"
+        android:layout_below="@id/countTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="5dp"/>
+
+</RelativeLayout>

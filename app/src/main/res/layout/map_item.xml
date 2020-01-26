@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="60dp"
+    android:layout_height="60dp">
+    <RelativeLayout
+        android:id="@+id/mapItemRelativeLayout"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_margin="1dp"
+        android:background="@color/colorPrimary">
+        <TextView
+            android:id="@+id/mapItemButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="222"
+            android:textColor="#fff"
+            android:textSize="13sp"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true" />
+        <TextView
+            android:id="@+id/mapItemID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="#1"
+            android:textColor="#fff"
+            android:textSize="7sp"
+            android:layout_margin="1dp"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/mapItemButton"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="1dp">
+        <ImageView
+            android:id="@+id/rightImg"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow_right_white"
+            android:layout_marginRight="1dp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/leftImg"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow_left_white"
+            android:layout_marginLeft="1dp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/upImg"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/arrow_up_white"
+            android:layout_marginTop="1dp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/downImg"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/arrow_down_white"
+            android:layout_marginBottom="1dp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/rightDownImg"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/arrow_down_right_white"
+            android:layout_margin="3dp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/leftDownImg"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/arrow_down_left_white"
+            android:layout_margin="3dp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/rightUpImg"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/arrow_up_right_white"
+            android:layout_margin="3dp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/leftUpImg"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/arrow_up_left_white"
+            android:layout_margin="3dp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

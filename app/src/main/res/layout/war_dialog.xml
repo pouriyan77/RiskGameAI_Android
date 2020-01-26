@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="40dp">
+
+
+    <TextView
+        android:id="@+id/attackerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPlayer1"
+        android:paddingHorizontal="8dp"
+        android:textColor="#fff"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/defenderTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="6" />
+
+    <TextView
+        android:id="@+id/defenderTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="30sp"
+        android:textColor="#fff"
+        android:background="@color/colorPlayer2"
+        android:paddingHorizontal="8dp"/>
+
+    <ImageView
+        android:id="@+id/warImageView"
+        android:layout_width="40dp"
+        android:layout_height="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/defenderTextView"
+        app:layout_constraintStart_toEndOf="@+id/attackerTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/arrow_left_black"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/attackerIdTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        tools:text="#1002"
+        android:textColor="#000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/attackerTextView"
+        app:layout_constraintStart_toEndOf="@+id/attackerTextView"
+        app:layout_constraintTop_toBottomOf="@+id/attackerTextView" />
+
+    <TextView
+        android:id="@+id/defenderIdTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="#102"
+        android:textColor="#000"
+        app:layout_constraintBaseline_toBaselineOf="@+id/attackerIdTextView"
+        app:layout_constraintEnd_toStartOf="@+id/defenderTextView"
+        app:layout_constraintStart_toEndOf="@+id/defenderTextView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
